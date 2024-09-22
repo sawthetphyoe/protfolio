@@ -125,7 +125,7 @@ function TechIconList({
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [isHovered, techIcons.length]);
+  }, [isHovered]);
 
   const handleHover = (index: number) => {
     setIsHovered(true);
@@ -367,9 +367,10 @@ export default function Portfolio() {
             <div className="flex flex-col gap-7 max-w-md items-center mx-auto">
               <SectionTitle title="Contact" />
               <p className="text-base leading-7 text-center">
-                I'm a software engineer fueled by a love for solving problems
-                and a thirst for new challenges. If you're looking to team up or
-                have an awesome project in mind, let's connect!
+                I&apos;m a software engineer fueled by a love for solving
+                problems and a thirst for new challenges. If you&apos;re looking
+                to team up or have an awesome project in mind, let&apos;s
+                connect!
               </p>
               <Link href="mailto:sawthetphyoe28498@gmail.com">
                 <Button

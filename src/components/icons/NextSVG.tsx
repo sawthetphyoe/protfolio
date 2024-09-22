@@ -34,7 +34,7 @@ function NextSVG() {
       </defs>
       <g>
         <mask id="mask-2" fill="white">
-          <use xlink:href="#path-1"></use>
+          <use xlinkHref="#path-1"></use>
         </mask>
         <g mask="url(#mask-2)">
           <circle fill="#000000" cx="128" cy="128" r="128"></circle>

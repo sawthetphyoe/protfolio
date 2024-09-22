@@ -39,7 +39,7 @@ export const education: Education[] = [
     ],
   },
   {
-    title: "B.E. in Electronic Engineering",
+    title: "B.Eng. in Electrical Engineering",
     university: "Yangon Technological University",
     year: "2015 - 2020",
     courses: [
@@ -52,35 +52,48 @@ export const education: Education[] = [
 
 export const projects: Project[] = [
   {
-    title: "c4code",
-    description: "This is a project that I built using React and Node.js",
+    title: "E-wallet admin dashboard",
+    description:
+      "Unified admin dashboard for a local bank, managing e-wallet apps for consumers, agents, super agents, and merchants.",
     images: [
       "https://images.unsplash.com/photo-1726853522009-8dc4c4e306a3?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://plus.unsplash.com/premium_photo-1682125196952-a37ba95ee650?q=80&w=2980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
-    technologies: ["React", "Express.js", "MUI"],
-    github: "https://github.com/sawthetphyoe/c4code",
+    technologies: ["Next.js", "TailwindCSS", "Ant Design"],
   },
   {
-    title: "iconic admin",
-    description: "This is a project that I built using React and Node.js",
+    title: "iCONIC admin",
+    description:
+      "Admin panel for managing e-commerce products, branches, orders, deliveries, and inventory",
     images: [
       "https://images.unsplash.com/photo-1726853522009-8dc4c4e306a3?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://plus.unsplash.com/premium_photo-1682125196952-a37ba95ee650?q=80&w=2980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
-    technologies: ["Next.js", "Next.js", "TailwindCSS", "DaisyUI"],
+    technologies: ["Next.js", "TailwindCSS", "DaisyUI"],
     github: "https://github.com/sawthetphyoe/iconic-admin",
     demo: "https://google.com",
   },
 
   {
-    title: "iconic server",
-    description: "This is a project that I built using React and Node.js",
+    title: "iCONIC server",
+    description:
+      "Backend server for iconic apps, providing APIs for the admin dashboard and consumer platform.",
     images: [
       "https://images.unsplash.com/photo-1726853522009-8dc4c4e306a3?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://plus.unsplash.com/premium_photo-1682125196952-a37ba95ee650?q=80&w=2980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
-    technologies: ["Next.js", "Node.js", "Next.js", "MongoDB"],
-    github: "https://github.com/sawthetphyoe/iconic-admin",
+    technologies: ["Node.js", "Nest.js", "MongoDB"],
+    github: "https://github.com/sawthetphyoe/iconic-be",
+  },
+  {
+    title: "c4code",
+    description:
+      "An e-learning platform for managing courses, students, tutors, and enrollments with admin and student panels.",
+    images: [
+      "https://images.unsplash.com/photo-1726853522009-8dc4c4e306a3?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1682125196952-a37ba95ee650?q=80&w=2980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    ],
+    technologies: ["React", "RTK Query", "Express.js", "MUI", "MongoDB"],
+    github: "https://github.com/sawthetphyoe/c4code",
   },
 ];

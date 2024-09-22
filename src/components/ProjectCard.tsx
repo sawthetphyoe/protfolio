@@ -14,7 +14,7 @@ function ProjectCard({ project }: ProjectCardProps) {
     <div>
       <div className="w-full h-40 overflow-hidden cursor-zoom-in">
         <Image
-          className="w-full h-full object-cover hover:scale-110 transition-all duration-500 rounded-sm"
+          className="w-full h-full object-cover hover:scale-110 transition-all duration-500 rounded-t-sm"
           src={project.images[0]}
           alt={project.title}
           width={200}
@@ -22,7 +22,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         />
       </div>
       <div className="flex flex-col gap-2">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between h-9">
           <h3 className="text-base font-semibold text-primary">
             {project.title}
           </h3>
@@ -31,7 +31,7 @@ function ProjectCard({ project }: ProjectCardProps) {
               <Link href={project.github} target="_blank">
                 <Button
                   variant="link"
-                  className="p-0 hover:scale-125 transition-all duration-300 !text-primary-foreground hover:!text-primary"
+                  className="p-0 hover:scale-125 transition-all duration-300 !text-primary-foreground hover:!text-primary hover:-rotate-12 "
                 >
                   <FaGithub className="w-5 h-5 " />
                 </Button>
@@ -41,7 +41,7 @@ function ProjectCard({ project }: ProjectCardProps) {
               <Link href={project.demo} target="_blank">
                 <Button
                   variant="link"
-                  className="p-0 hover:scale-125 transition-all duration-300 !text-primary-foreground hover:!text-primary"
+                  className="p-0 hover:scale-125 transition-all duration-300 !text-primary-foreground hover:!text-primary hover:-rotate-12"
                 >
                   <GoPlay className="w-5 h-5 " />
                 </Button>

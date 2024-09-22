@@ -30,6 +30,9 @@ function ProjectCard({ project }: ProjectCardProps) {
             {project.github && (
               <Link href={project.github} target="_blank">
                 <Button
+                  role="link"
+                  aria-label="Github Repository"
+                  aria-describedby="Github Repository"
                   variant="link"
                   className="p-0 hover:scale-125 transition-all duration-300 !text-primary-foreground hover:!text-primary hover:-rotate-12 "
                 >
@@ -40,6 +43,9 @@ function ProjectCard({ project }: ProjectCardProps) {
             {project.demo && (
               <Link href={project.demo} target="_blank">
                 <Button
+                  role="link"
+                  aria-label="Live Demo"
+                  aria-describedby="Live Demo"
                   variant="link"
                   className="p-0 hover:scale-125 transition-all duration-300 !text-primary-foreground hover:!text-primary hover:-rotate-12"
                 >

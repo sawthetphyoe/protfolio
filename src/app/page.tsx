@@ -232,6 +232,9 @@ export default function Portfolio() {
               <li key={section.key}>
                 <Button
                   id={`nav-${section.key}`}
+                  role="link"
+                  aria-label={section.title}
+                  aria-describedby={section.title}
                   variant="ghost"
                   className="font-medium"
                   onClick={() => handleNavClick(section.key)}
@@ -360,7 +363,13 @@ export default function Portfolio() {
                 adipisicing elit. Perspiciatis, quibusdam.
               </p>
               <Link href="mailto:sawthetphyoe@gmail.com">
-                <Button>Get in Touch</Button>
+                <Button
+                  role="link"
+                  aria-label="Get in Touch"
+                  aria-describedby="Get in Touch"
+                >
+                  Get in Touch
+                </Button>
               </Link>
             </div>
           </motion.div>

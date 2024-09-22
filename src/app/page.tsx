@@ -17,6 +17,7 @@ import {
 import MotionSection from "@/components/MotionSection";
 import ProjectCard from "@/components/ProjectCard";
 import SectionTitle from "@/components/SectionTitle";
+import ThemeSwitch from "@/components/ThemeSwitcher";
 import { education, navLinks, projects } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -62,7 +63,7 @@ const TechIcon = ({
 
   return (
     <motion.div
-      className="flex items-center bg-stone-900 rounded-full overflow-hidden cursor-pointer"
+      className="flex items-center bg-card rounded-full overflow-hidden cursor-pointer"
       initial={{ width: "40px" }}
       animate={{ width: isExpanded ? "auto" : "40px" }}
       transition={{ duration: 0.3 }}
@@ -81,13 +82,13 @@ const TechIcon = ({
       <AnimatePresence>
         {isExpanded && (
           <motion.p
-            className="pr-4 pl-2 text-sm font-semibold text-primary-foreground whitespace-nowrap"
+            className="pr-4 pl-2 text-sm font-semibold text-foreground whitespace-nowrap"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {text}
+            <span className="text-foreground">{text}</span>
           </motion.p>
         )}
       </AnimatePresence>
@@ -226,7 +227,7 @@ export default function Portfolio() {
       className="min-h-screen bg-background text-foreground"
     >
       <header className="fixed top-0 left-0 right-0 z-10 bg-background/80 backdrop-blur-xl">
-        <nav className="container mx-auto px-4 py-4">
+        <nav className="container mx-auto px-4 py-4 relative">
           <ul className="flex justify-center md:space-x-4">
             {navLinks.map((section) => (
               <li key={section.key}>
@@ -244,6 +245,7 @@ export default function Portfolio() {
               </li>
             ))}
           </ul>
+          <ThemeSwitch className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2" />
         </nav>
       </header>
 
@@ -278,7 +280,7 @@ export default function Portfolio() {
           </motion.div>
         </MotionSection>
 
-        <MotionSection id="who-am-i" className="bg-stone-900 bg-opacity-20">
+        <MotionSection id="who-am-i" className="bg-card bg-opacity-20">
           <motion.div
             style={{ scale: useTransform(smoothProgress, [0.5, 1], [1, 0.8]) }}
           >
@@ -348,10 +350,7 @@ export default function Portfolio() {
           </div>
         </MotionSection>
 
-        <MotionSection
-          id="contact"
-          className="bg-stone-900 bg-opacity-20 py-32"
-        >
+        <MotionSection id="contact" className="bg-card bg-opacity-20 py-32">
           <motion.div
             style={{ scale: useTransform(smoothProgress, [0.5, 1], [1, 0.8]) }}
           >

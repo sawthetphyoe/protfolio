@@ -27,7 +27,6 @@ export default function ThemeSwitch({ className }: { className?: string }) {
         )}
         role="switch"
         aria-checked={theme.theme === "dark"}
-        aria-pressed={theme.theme === "dark"}
         aria-label={
           theme.theme === "dark"
             ? "Switch to light mode"

@@ -14,12 +14,16 @@ import {
   useTransform,
 } from "framer-motion";
 
+import FacebookSVG from "@/components/icons/FacebookSVG";
+import GithubSVG from "@/components/icons/GithubSVG";
+import LinkedInSVG from "@/components/icons/LinkedInSVG";
 import MotionSection from "@/components/MotionSection";
 import ProjectCard from "@/components/ProjectCard";
 import SectionTitle from "@/components/SectionTitle";
 import ThemeSwitch from "@/components/ThemeSwitcher";
 import { education, navLinks, projects } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Typed from "typed.js";
@@ -121,7 +125,7 @@ function TechIconList({
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [isHovered, techIcons.length]);
+  }, [isHovered]);
 
   const handleHover = (index: number) => {
     setIsHovered(true);
@@ -264,10 +268,11 @@ export default function Portfolio() {
                   <span ref={titleElement} />
                 </div>
                 <p className="text-base leading-7 flex flex-col gap-1">
-                  I am a software engineer with a passion for building scalable
-                  and efficient software solutions. I have experience in
-                  building web applications using React and Node.js. I am a
-                  quick learner and I am always looking to learn new things.
+                  I&apos;m a dedicated software engineer with over 2 years of
+                  experience in developing scalable, high-performance web
+                  applications. I specialize in frontend development and bring a
+                  strong attention to detail, along with a dedication to
+                  delivering high-quality, efficient solutions.
                 </p>
                 <TechIconList icons={techIcons} />
               </div>
@@ -286,7 +291,7 @@ export default function Portfolio() {
             style={{ scale: useTransform(smoothProgress, [0.5, 1], [1, 0.8]) }}
           >
             <div className="flex items-center w-full max-w-5xl mx-auto gap-8">
-              <div className="w-1/2 hidden md:block">
+              <div className="hidden w-1/3 md:block">
                 <Image
                   src={"/images/my_profile.png"}
                   alt="profile"
@@ -299,19 +304,21 @@ export default function Portfolio() {
                   }}
                 />
               </div>
-              <div className="flex flex-col gap-5 max-w-xl mx-auto">
+              <div className="flex w-2/3 flex-col gap-5  mx-auto">
                 <SectionTitle title="Who am I?" />
                 <p className="text-base leading-7">
-                  With over 2 years of experience in the field of software
-                  engineering, I have honed my skills in building scalable and
-                  efficient software solutions.
+                  My journey in software engineering is built on a strong
+                  educational foundation and hands-on experience. With degrees
+                  in computing and engineering, I&apos;ve gained a solid
+                  understanding of both the technical and practical aspects of
+                  creating software solutions.
                 </p>
                 <div className="flex flex-col gap-3">
-                  <p>Here is my educational background.</p>
+                  <p>Here is my education background.</p>
                   <div className="flex flex-col gap-6">
                     {education.map((edu) => (
                       <div key={edu.title} className="flex flex-col gap-1">
-                        <p className="text-lg font-bold text-primary/80">
+                        <p className="text-lg font-bold text-primary/90">
                           {edu.title}
                         </p>
                         <p className="flex gap-2 items-center flex-wrap">
@@ -353,35 +360,82 @@ export default function Portfolio() {
           </div>
         </MotionSection>
 
-        <MotionSection id="contact" className="bg-card bg-opacity-20 py-32">
+        <MotionSection id="contact" className="bg-card bg-opacity-20 py-24">
           <motion.div
             style={{ scale: useTransform(smoothProgress, [0.5, 1], [1, 0.8]) }}
           >
-            <div className="flex flex-col gap-5 max-w-md items-center mx-auto">
+            <div className="flex flex-col gap-7 max-w-md items-center mx-auto">
               <SectionTitle title="Contact" />
               <p className="text-base leading-7 text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Perspiciatis, quibusdam. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Perspiciatis, quibusdam.
+                I&apos;m a software engineer fueled by a love for solving
+                problems and a thirst for new challenges. If you&apos;re looking
+                to team up or have an awesome project in mind, let&apos;s
+                connect!
               </p>
-              <Link href="mailto:sawthetphyoe@gmail.com">
+              <Link href="mailto:sawthetphyoe28498@gmail.com">
                 <Button
+                  size="lg"
                   role="link"
                   aria-label="Get in Touch"
                   aria-describedby="Get in Touch"
+                  className="font-bold text-lg tracking-tight flex gap-3 items-center"
                 >
-                  Get in Touch
+                  Get in Touch! <Send className="w-4 h-4" />
                 </Button>
               </Link>
             </div>
           </motion.div>
         </MotionSection>
 
-        <footer className="py-8">
-          <p className="text-sm text-center">
-            &copy; {new Date().getFullYear()} Saw Thet Phyoe. All rights
-            reserved.
-          </p>
+        <footer className="pt-10 pb-6 flex flex-col gap-6">
+          <div className="flex gap-6 justify-center">
+            <Link
+              href="https://github.com/sawthetphyoe"
+              target="_blank"
+              className="hover:text-primary hover:scale-110 hover:-rotate-12 duration-300 transition-all"
+            >
+              <GithubSVG />
+            </Link>
+            <Link
+              href="https://linkedin.com/in/saw-thet-phyoe-69aa9b1b9"
+              target="_blank"
+              className="hover:text-primary hover:scale-110 hover:-rotate-12 duration-300 transition-all"
+            >
+              <LinkedInSVG />
+            </Link>
+            <Link
+              href="https://www.facebook.com/phyo.sawthet.1"
+              target="_blank"
+              className="hover:text-primary hover:scale-110 hover:-rotate-12 duration-300 transition-all"
+            >
+              <FacebookSVG />
+            </Link>
+          </div>
+          <div className="text-muted-foreground text-sm text-center flex flex-col gap-2">
+            <p className="text-sm text-center">
+              <span>Developed with </span>
+              <Link
+                href="https://nextjs.org"
+                target="_blank"
+                className="text-primary/80  underline-offset-4 hover:underline"
+              >
+                Next
+              </Link>
+              <span> and </span>
+              <Link
+                href="https://www.framer.com/motion/"
+                target="_blank"
+                className="text-primary/80 underline-offset-4 hover:underline"
+              >
+                Framer
+              </Link>
+              <span>. </span>
+            </p>
+            <p>
+              &copy; {new Date().getFullYear()} Saw Thet Phyoe. All rights
+              reserved.
+            </p>
+          </div>
         </footer>
       </main>
     </div>

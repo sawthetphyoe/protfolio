@@ -75,6 +75,7 @@ const TechIcon = ({
           alt={text}
           width={24}
           height={24}
+          priority
           className="w-full h-full object-contain rounded-full"
           style={{ filter: "drop-shadow(2px 2px 4px #ffb4291a)" }}
         />
@@ -289,8 +290,10 @@ export default function Portfolio() {
                 <Image
                   src={"/images/my_profile.png"}
                   alt="profile"
-                  width={300}
-                  height={300}
+                  width={200}
+                  height={200}
+                  priority
+                  className="!w-[300px] !h-auto"
                   style={{
                     filter: "drop-shadow(2px 3px 9px #ffb4293a)",
                   }}

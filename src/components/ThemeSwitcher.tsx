@@ -22,9 +22,12 @@ export default function ThemeSwitch({ className }: { className?: string }) {
       <button
         onClick={toggleTheme}
         className={cn(
-          "relative w-[52px] h-[30px] rounded-full p-1 transition-colors duration-500 ease-in bg-foreground",
+          "w-[52px] h-[30px] rounded-full p-1 transition-colors duration-500 ease-in bg-foreground",
           className
         )}
+        role="switch"
+        aria-checked={theme.theme === "dark"}
+        aria-pressed={theme.theme === "dark"}
         aria-label={
           theme.theme === "dark"
             ? "Switch to light mode"

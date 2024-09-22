@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -29,7 +17,7 @@ body {
 @layer base {
   :root {
     --background: 210 16% 95%; /* Soft light gray */
-    --foreground: 210 22% 20%; /* Darker, but not pure black */
+    --foreground: 210 16% 20%; /* Darker, but not pure black */
     --card: 210 16% 92%; /* Slightly darker than background */
     --card-foreground: 210 22% 20%;
     --popover: 210 16% 92%;

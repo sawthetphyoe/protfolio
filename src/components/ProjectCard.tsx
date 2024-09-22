@@ -34,7 +34,7 @@ function ProjectCard({ project }: ProjectCardProps) {
                   aria-label="Github Repository"
                   aria-describedby="Github Repository"
                   variant="link"
-                  className="p-0 hover:scale-125 transition-all duration-300 !text-primary-foreground hover:!text-primary hover:-rotate-12 "
+                  className="p-0 hover:scale-125 transition-all duration-300 text-foreground hover:!text-primary hover:-rotate-12 "
                 >
                   <FaGithub className="w-5 h-5 " />
                 </Button>
@@ -47,7 +47,7 @@ function ProjectCard({ project }: ProjectCardProps) {
                   aria-label="Live Demo"
                   aria-describedby="Live Demo"
                   variant="link"
-                  className="p-0 hover:scale-125 transition-all duration-300 !text-primary-foreground hover:!text-primary hover:-rotate-12"
+                  className="p-0 hover:scale-125 transition-all duration-300 text-foreground hover:!text-primary hover:-rotate-12"
                 >
                   <GoPlay className="w-5 h-5 " />
                 </Button>
@@ -55,9 +55,7 @@ function ProjectCard({ project }: ProjectCardProps) {
             )}
           </div>
         </div>
-        <p className="text-sm text-primary-foreground ">
-          {project.description}
-        </p>
+        <p className="text-sm text-foreground ">{project.description}</p>
         <div className="flex items-center gap-2 flex-wrap">
           {project.technologies.map((technology) => (
             <span

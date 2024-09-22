@@ -10,8 +10,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sawthetphyoe.me"),
   title: "Saw Thet Phyoe - Software Engineer",
+  description:
+    "Experienced software engineer specializing in web development, skilled in frontend and backend technologies, delivering efficient and scalable web applications.",
   applicationName: "Saw Thet Phyoe - Software Engineer",
+  icons: {
+    icon: "/icon.png",
+  },
   authors: [{ name: "Saw Thet Phyoe", url: "https://sawthetphyoe.me" }],
   keywords: [
     "sawthet",
@@ -28,14 +34,6 @@ export const metadata: Metadata = {
     "Full Stack Developer",
   ],
   creator: "Saw Thet Phyoe",
-  description:
-    "Experienced software engineer specializing in web development, skilled in frontend and backend technologies, delivering efficient and scalable web applications.",
-  icons: {
-    icon: "/icon.png",
-  },
-  openGraph: {
-    images: "/portfolio_avatar.svg",
-  },
 };
 
 export default function RootLayout({

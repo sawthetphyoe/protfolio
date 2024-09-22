@@ -71,7 +71,6 @@ export const projects: Project[] = [
     ],
     technologies: ["Next.js", "TailwindCSS", "DaisyUI"],
     github: "https://github.com/sawthetphyoe/iconic-admin",
-    demo: "https://google.com",
   },
 
   {

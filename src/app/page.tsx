@@ -259,7 +259,7 @@ export default function Portfolio() {
           <motion.div
             style={{ scale: useTransform(smoothProgress, [0, 0.5], [1, 0.8]) }}
           >
-            <div className="flex justify-between items-center flex-col-reverse md:flex-row gap-8">
+            <div className="flex justify-between items-center flex-col-reverse md:flex-row lg:gap-8">
               <div className="flex flex-col gap-5">
                 <h1 className="text-4xl md:text-5xl xl:text-7xl font-bold">
                   Saw Thet Phyoe
@@ -304,7 +304,7 @@ export default function Portfolio() {
                   }}
                 />
               </div>
-              <div className="flex w-2/3 flex-col gap-5  mx-auto">
+              <div className="flex md:w-2/3 flex-col gap-5  mx-auto">
                 <SectionTitle title="Who am I?" />
                 <p className="text-base leading-7">
                   My journey in software engineering is built on a strong

@@ -22,7 +22,7 @@ const MotionSection = ({
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.5 }}
       className={cn(
-        "py-12 md:py-20 scroll-m-24 w-screen px-8 md:px-28",
+        "py-12 md:py-20 scroll-m-24 w-screen px-8 md:px-12 lg:px-28",
         className
       )}
     >
